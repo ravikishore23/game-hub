@@ -7,13 +7,12 @@ interface props {
 
 function GameCard({ game }: props) {
   return (
-    <Card.Root width={300} height={400}>
+    <Card.Root width={300} height={340} padding={5}>
+      <Image borderRadius={5} src={game.background_image} alt={game.name} />
+
       <Card.Body>
-        <Image src={game.image_background} alt="404" />
-      </Card.Body>
-      <Card.Footer>
         <Heading>{game.name}</Heading>
-      </Card.Footer>
+      </Card.Body>
     </Card.Root>
   );
 }

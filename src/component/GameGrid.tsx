@@ -11,8 +11,8 @@ function GameGrid() {
       <SimpleGrid
         columns={{ sm: 1, md: 2, lg: 3 }}
         gap={6}
-        overflow={"hidden"}
-        border={9}
+        overflow="hidden"
+        border={10}
         padding={10}
       >
         {games.map((game) => (

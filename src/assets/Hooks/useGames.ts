@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 export interface Game {
   id: number;
   name: string;
-  image_background: string;
+  background_image: string;
 }
 
 interface FetchGamesResponse {
