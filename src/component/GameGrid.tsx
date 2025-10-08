@@ -9,8 +9,9 @@ function GameGrid() {
     <>
       {error && <text> {error}</text>}
       <SimpleGrid
-        columns={{ sm: 1, md: 2, lg: 3 }}
-        gap={6}
+        columns={{ sm: 1, md: 2, lg: 3, xl: 4 }}
+        gap={5}
+        spaceX={0}
         overflow="hidden"
         border={10}
         padding={10}
