@@ -10,7 +10,12 @@ import {
   Text,
 } from "@chakra-ui/react";
 
-function GenreList({ onSelectedGenre }: props) {
+interface props {
+  onSelectedGenre: (genre: Genre) => void;
+  selectedGenre: Genre | null;
+}
+
+function GenreList({ selectedGenre, onSelectedGenre }: props) {
   const { Data, isLoading, error } = useGenres();
 
   return (
@@ -28,6 +33,9 @@ function GenreList({ onSelectedGenre }: props) {
                 color={"white"}
                 onClick={() => onSelectedGenre(genre)}
                 fontSize={15}
+                fontWeight={
+                  genre.id === selectedGenre?.id ? "bolder" : "normal"
+                }
               >
                 <HStack>
                   <Image
