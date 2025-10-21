@@ -11,8 +11,8 @@ interface props {
 function GameCard({ game }: props) {
   let imageUrl = getCroppedImageUrl(game.background_image);
   return (
-    <Card.Root>
-      <Image padding={3} src={imageUrl} alt={game.name} />
+    <Card.Root flex="fit-content">
+      <Image padding={3} src={imageUrl} />
 
       <Card.Body>
         <Heading>{game.name}</Heading>

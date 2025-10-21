@@ -34,7 +34,11 @@ function PlatfromIconList({ platfroms }: props) {
     <>
       <HStack>
         {platfroms.map((platfrom) => (
-          <Icon as={iconMap[platfrom.slug]} color="gray.500" />
+          <Icon
+            key={platfrom.id}
+            as={iconMap[platfrom.slug]}
+            color="gray.500"
+          />
         ))}
       </HStack>
     </>
