@@ -1,4 +1,4 @@
-import type { Platfrom } from "@/assets/Hooks/useGames";
+import type { Platform } from "@/assets/Hooks/useGames";
 import {
   FaWindows,
   FaPlaystation,

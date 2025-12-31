@@ -5,11 +5,11 @@ import GenreList from "./component/GenreList";
 import { useState } from "react";
 import type { Genre } from "./assets/Hooks/useGenres";
 import PlatformSelector from "./component/PlatformSelector";
-import type { Platfrom } from "./assets/Hooks/useGames";
+import type { Platform } from "./assets/Hooks/useGames";
 
 function App() {
   const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
-  const [selectedPlatform, setSelectedPlatform] = useState<Platfrom | null>(
+  const [selectedPlatform, setSelectedPlatform] = useState<Platform | null>(
     null
   );
 
