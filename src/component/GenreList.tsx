@@ -16,7 +16,7 @@ interface props {
 }
 
 function GenreList({ selectedGenre, onSelectedGenre }: props) {
-  const { Data, isLoading, error } = useGenres();
+  const { data, isLoading, error } = useGenres();
 
   return (
     <>
@@ -24,7 +24,7 @@ function GenreList({ selectedGenre, onSelectedGenre }: props) {
       {isLoading && <Spinner />}
 
       <ListRoot marginTop="25px">
-        {Data.map((genre) => {
+        {data.map((genre) => {
           return (
             <ListItem key={genre.id} padding={3}>
               <Button

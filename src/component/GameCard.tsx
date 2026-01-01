@@ -12,7 +12,7 @@ function GameCard({ game }: props) {
   let imageUrl = getCroppedImageUrl(game.background_image);
   return (
     <Card.Root flex="fit-content">
-      <Image padding={3} src={imageUrl} />
+      <Image padding={3} src={imageUrl} alt={game.background_image} />
 
       <Card.Body>
         <Heading>{game.name}</Heading>

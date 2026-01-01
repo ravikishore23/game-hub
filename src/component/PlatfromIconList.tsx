@@ -15,7 +15,7 @@ import { HStack, Icon } from "@chakra-ui/react";
 import type { IconType } from "react-icons";
 
 interface props {
-  platfroms: Platfrom[];
+  platfroms: Platform[];
 }
 
 function PlatfromIconList({ platfroms }: props) {
