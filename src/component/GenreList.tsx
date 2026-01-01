@@ -30,9 +30,9 @@ function GenreList({ selectedGenre, onSelectedGenre }: props) {
               <Button
                 bg={"none"}
                 borderRadius={10}
-                color={"white"}
                 onClick={() => onSelectedGenre(genre)}
                 fontSize={15}
+                color={"white"}
                 fontWeight={
                   genre.id === selectedGenre?.id ? "bolder" : "normal"
                 }
