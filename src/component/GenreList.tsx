@@ -7,9 +7,9 @@ import {
   Image,
   ListItem,
   ListRoot,
-  Spinner,
   Text,
 } from "@chakra-ui/react";
+import GenreListSkeleton from "./GenreListSkeleton";
 
 interface props {
   onSelectedGenre: (genre: Genre) => void;
@@ -18,16 +18,17 @@ interface props {
 
 function GenreList({ selectedGenre, onSelectedGenre }: props) {
   const { data, isLoading, error } = useGenres();
+  const skeleton = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+
+  if (error) return <Text>{error}</Text>;
 
   return (
     <>
-      {error && <Text>{error}</Text>}
-      {isLoading && <Spinner />}
-
       <Heading marginLeft={8} marginTop={5} fontSize={25}>
         Genres
       </Heading>
       <ListRoot>
+        {isLoading && skeleton.map(() => <GenreListSkeleton />)}
         {data.map((genre) => {
           return (
             <ListItem key={genre.id} padding={3}>
